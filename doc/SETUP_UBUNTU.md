@@ -267,6 +267,7 @@ export CXX="clang++-6.0" && export CC="clang-6.0"
 
 
 # Install mapnik
+sudo apt install git
 git clone https://github.com/mapnik/mapnik mapnik
 cd mapnik
 git checkout v3.0.x
