@@ -187,10 +187,10 @@ We use the tool [Imposm](https://imposm.org/docs/imposm3/latest/) to fill our da
 
 1. Install Imposm
 ```
-sudo wget "https://github.com/omniscale/imposm3/releases/download/v0.10.0/imposm-0.10.0-linux-x86-64.tar.gz"
+sudo wget "https://github.com/omniscale/imposm3/releases/download/v0.14.2/imposm-0.14.2-linux-x86-64.tar.gz"
 ```
 ```
-tar -xf imposm-0.10.0-linux-x86-64.tar.gz # unpack
+tar -xf imposm-0.14.2-linux-x86-64.tar.gz # unpack
 ```
 
 2. Download street map data for Berlin and DACH-Region
@@ -208,12 +208,12 @@ Choose either 3a) or 3b) next according to your needs.
 
 3.a) Execute Imposm small version (will only work for Berlin)
 ```
-sudo ./imposm-0.10.0-linux-x86-64/imposm import -mapping mapping.yml -read "/var/simra/pbf/dach-latest.osm.pbf" -overwritecache -write -connection postgis://simra:simra12345simra@localhost/simra
+sudo ./imposm-0.14.2-linux-x86-64/imposm import -mapping mapping.yml -read "/var/simra/pbf/berlin-latest.osm.pbf" -overwritecache -write -connection postgis://simra:simra12345simra@localhost/simra
 ```
 
 3.b) Execute Imposm large version (will work for the complete DACH-Region)
 ```
-sudo ./imposm-0.10.0-linux-x86-64/imposm import -mapping mapping.yml -read "/var/simra/pbf/berlin-latest.osm.pbf" -overwritecache -write -connection postgis://simra:simra12345simra@localhost/simra
+sudo ./imposm-0.14.2-linux-x86-64/imposm import -mapping mapping.yml -read "/var/simra/pbf/dach-latest.osm.pbf" -overwritecache -write -connection postgis://simra:simra12345simra@localhost/simra
 ```
 
 This created the schema `import` with the table `osm_ways` which is used in the next step by the `create_legs.py` script. Then we import the csv data into our database.
