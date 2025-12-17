@@ -130,6 +130,9 @@ sudo apt-get install -y libpq-dev python-dev pkg-config libcairo2-dev
 ```
 ```
 sudo apt-get install -y libffi6 libffi-dev swig
+``
+python -m pip install --upgrade pip setuptools wheel
+pip install cffi
 ```
 
 3. Install all packages of requirement.txt
